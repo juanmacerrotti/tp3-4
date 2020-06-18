@@ -27,7 +27,7 @@ int main()
 	setbuf (stdout,NULL);
 
 	LinkedList* listaEmpleados = ll_newLinkedList();
-	LinkedList* listaEmpleadosDos = NULL;
+
 
     int option = 0;
 
@@ -96,7 +96,7 @@ int main()
     			break;
     			/********************************************************************************************************************/
     			case 12:
-    			controller_listaHoras(listaEmpleados,listaEmpleadosDos);
+    			controller_listaHoras(listaEmpleados);
     			break;
     			/********************************************************************************************************************/
     		}

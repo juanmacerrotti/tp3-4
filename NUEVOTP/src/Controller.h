@@ -21,6 +21,6 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
 int controller_imprimirLista(LinkedList* listaEmpleados);
 int controller_borrarSueldosAltos(LinkedList* listaEmpleados);
 int controller_listaSuledos(LinkedList* listaEmpleados,LinkedList* listaEmpleadosDos);
-int controller_listaHoras(LinkedList* listaEmpleados,LinkedList* listaEmpleadosDos);
+int controller_listaHoras(LinkedList* listaEmpleados);
 
 #endif /* CONTROLLER_H_ */

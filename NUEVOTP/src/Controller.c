@@ -384,13 +384,15 @@ int controller_borrarSueldosAltos(LinkedList* listaEmpleados)
 	}
 	return 0;
 }
-int controller_listaHoras(LinkedList* listaEmpleados,LinkedList* listaEmpleadosDos)
+int controller_listaHoras(LinkedList* listaEmpleados)
 {
 
-	listaEmpleadosDos = ll_filter (listaEmpleados, employee_funcionCriterioHoras);  // me devuelve el puntero a una lista clone.
-	if(listaEmpleadosDos != NULL)
+	LinkedList* listaClone = NULL;
+
+	listaClone = ll_filter (listaEmpleados, employee_funcionCriterioHoras);  // me devuelve el puntero a una lista clone.
+	if(listaClone != NULL)
 	{
-		if(ll_len(listaEmpleadosDos) != 0)
+		if(ll_len(listaClone) != 0)
 		{
 			printf("Lista auxiliar creada. \n"); // da el ok
 		}
@@ -399,7 +401,8 @@ int controller_listaHoras(LinkedList* listaEmpleados,LinkedList* listaEmpleadosD
 			printf("lista vacia\n"); // si no hay empleados que cumplan los requisitos.
 		}
 	}
-	controller_ListEmployee(listaEmpleadosDos);
+	controller_ListEmployee(listaClone);
+	free(listaClone);
 
 	return 0;
 }
